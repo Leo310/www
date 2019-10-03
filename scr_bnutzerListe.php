@@ -15,7 +15,7 @@ $delete = -1;
 		
 foreach($users as $user){
 	$daten = explode(";",$user);
-	if($daten[2] == "admin"  || $daten[2] == "nutzer"){
+	if($newrechte == "admin"  || $newrechte == "nutzer"){
 	if ($name == $daten[0]) $delete = $index;
 	$index++;
 	if($daten[0] == $name){

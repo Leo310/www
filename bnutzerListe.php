@@ -4,7 +4,7 @@ include("include/inc_htmlhead");
 
 ?>
 
-<h1>Nutzerliste</h1>
+<h1>nutzerliste</h1>
 <div style='margin-left:auto; margin-right:auto; margin-top:150px; min-width:500px; width:50%;'>
 <table>
 <thead>
