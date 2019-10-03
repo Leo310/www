@@ -10,7 +10,7 @@
 <!-- always used menu -->
 <button style="float:right; margin-top:8px; margin-right:10px" class="abmeldebutton" onClick="window.location.href='scr_logout.php'">abmelden »</button>
 
-<h1 style="float:right; margin-top:11px; margin-right:2%; color: #ca3e47;" class="userloggedin"><?php echo $_SESSION['user'];?></h2>
+<h1 style="float:right; margin-top:11px; margin-right:2%; color: #ff2e2e;" class="userloggedin"><?php echo $_SESSION['user'];?></h2>
 <h1 style="float:right; margin-top:11px; margin-right:3%" class="userloggedin">|</h2>
 
 

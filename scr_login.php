@@ -31,7 +31,7 @@ foreach ($users as $user) {
 }
 switch ($found) {
     case 0:
-        $_SESSION['error'] = '<font color="#ca3e47">nutzername oder kennwort inkorrekt.</font> bitte wiederholen.';
+        $_SESSION['error'] = '<font color="#ff2e2e">nutzername oder kennwort inkorrekt.</font> bitte wiederholen.';
 		header("location:index.php");
         break;
     case 1:

@@ -52,9 +52,9 @@
 		.button:hover {
 		background: #ffffff; /* Alternative Hintergrundfarbe beim Überfahren */
 		border: 0px solid #ffffff; /* Rahmen */
-		color: #01d28e;
+		color: #ff2e2e;
 		
-		box-shadow: 0px 15px 20px rgba(1, 210, 142, 0.1);
+		box-shadow: 0px 15px 20px rgba(255, 46, 46, 0.1);
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 600;
 		font-size: 11px;
@@ -207,7 +207,7 @@
 		}
 		
 		.a:hover {
-		color: #01d28e;
+		color: #ff2e2e;
 		}	
 
 		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

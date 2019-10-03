@@ -32,10 +32,10 @@ foreach ($users as $user) {
 				$_SESSION['pwchanged'] = '<font color="#01d28e">neues passwort wurde gespeichert.';
 				
 			} else { 
-						$_SESSION['error'] = '<font color="#ca3e47">eingabe der neuen kennwörter stimmt nicht überein.</font> bitte wiederholen.';
+						$_SESSION['error'] = '<font color="#ff2e2e">eingabe der neuen kennwörter stimmt nicht überein.</font> bitte wiederholen.';
 						header("location:pwchange.php");	
 			}
-		} else { $_SESSION['error'] = '<font color="#ca3e47">eingabe des alten passworts inkorrekt. bitte wiederholen.';
+		} else { $_SESSION['error'] = '<font color="#ff2e2e">eingabe des alten passworts inkorrekt.</font> bitte wiederholen.';
 						header("location:pwchange.php");
 		}
 	}

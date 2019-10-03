@@ -14,7 +14,7 @@ $users = file("include/nutzer.txt",FILE_IGNORE_NEW_LINES);
 foreach($users as $user){
 	$daten = explode(";",$user);
 	if($daten[0] == $name){
-		$_SESSION['error'] = '<font color="#d1323c">Dieser Benutztername exsistiert schon.</font> Wählen sie einen anderen.';
+		$_SESSION['error'] = '<font color="#ff2e2e">dieser nutzername wird bereits verwendet.</font> wähle bitte einen anderen.';
 		$existent = true;
 		header("location:register.php");
 	}	else{
@@ -28,7 +28,7 @@ if(!$existent){
 	header("location:start.php");
 	
 }else{
-	$_SESSION['error1'] = '<font color="#d1323c">Eingabe der Passwörter stimmt nicht überein.</font> Bitte wiederholen.';
+	$_SESSION['error1'] = '<font color="#ff2e2e">eingabe der passwörter stimmt nicht überein.</font> bitte wiederholen.';
 	header("location:register.php");
 }
 }
