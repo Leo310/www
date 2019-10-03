@@ -29,9 +29,21 @@ foreach($users as $user){
 }	
 }
 
+// foreach($users as $user){
+	// $index++;
+	// $daten = explode(";",$user);
+	// if($newrechte == "admin"  || $newrechte == "nutzer"){
+	// if ($name == $daten[0]){
+	// $users[$index] = "$newname;$newpw;$newrechte";
+	// file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
+// }else{
+	// $_SESSION['error2'] = "Geben sie bei den Rechten entweder admin oder nutzer ein.";
+	// header("location:nutzerListe.php");
+// }	
+// }
+// }
+
 header("location:nutzerListe.php");
-
-
 
 
 ?>

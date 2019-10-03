@@ -1,7 +1,4 @@
-testuser;user2;nutzer
-leo;leo;nutzer
-leonaa;l;nutzer
-leonnn;leo;nutzer
-admin;1314;admin
-asda;12412;admin
-asfas;1412;nutzer
+admin;123;admin
+leo;123;nutzer
+püeter;4321;nutzer
+asda;123;nutzer

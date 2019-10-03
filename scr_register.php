@@ -3,6 +3,8 @@
 if(isset($_SESSION['user'])) header("location:start.php");
 $name = $pw = $bpw = "";
 $rechte = "nutzer";
+$_SESSION['rechte'] = $rechte;
+
 if(isset($_POST['name'])) $name=$_POST['name'];
 if(isset($_POST['pw'])) $pw =$_POST['pw'];	
 if(isset($_POST['bpw'])) $bpw =$_POST['bpw'];
