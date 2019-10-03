@@ -1,0 +1,3 @@
+admin;admin;admin
+peter;123;nutzer
+hans;1412;nutzer

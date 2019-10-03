@@ -1,0 +1,46 @@
+<?php
+session_start();
+if (isset($_SESSION['user'])) header("location:start.php");
+
+$name = $pw = "";
+$rechte = "admin";
+
+if (isset($_POST['name'])) $name = $_POST['name']; 
+if (isset($_POST['pw']))   $pw = $_POST['pw'];
+
+// Nutzerliste in ein Array einlesen, Zeilenumbrüche entfernen
+$users = file("include/nutzer.txt",FILE_IGNORE_NEW_LINES);
+
+$found = 0;
+
+// Die foreach-Schleife ist eine PHP-Spezialität - und sehr bequem
+foreach ($users as $user) {
+  // explode zerlegt den String in ein Array, das Trennzeichen ist frei wählbar
+  $daten = explode(";", $user);
+  if ($name == $daten[0] && $pw == $daten[1]) {
+	if($rechte == $daten[2]){
+		//auf adminseite
+		$found = 1;
+		$_SESSION['user'] = $daten[0];
+	}else{
+    $found = 2;
+    $_SESSION['user'] = $daten[0];
+	}
+  }
+
+}
+switch ($found) {
+    case 0:
+        $_SESSION['error'] = '<font color="red">Nutzername oder Kennwort fehlerhaft.</font> Bitte Eingabe wiederholen.';
+		header("location:index.php");
+        break;
+    case 1:
+        header("location:startadmin.php");
+        break;
+    case 2:
+        header("location:start.php");
+        break;
+} 
+
+
+?>

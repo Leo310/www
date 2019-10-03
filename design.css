@@ -1,0 +1,154 @@
+	.body {
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+}
+
+
+	input.inputRahmen {
+		width: 200px; 
+		height:20px;
+		margin-top: 5px;
+	
+		background-color: #313131; 
+		border: 3px solid #ffffff; 
+		border-radius: 50px;
+		border-color: #ffffff;
+		
+		color: #ffffff;
+	
+		padding: 5px 10px 5px 10px;
+	
+		text-align: left;
+		
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		} 
+		
+		.button {
+		width: 150px; /* Breite des Buttons */
+		height: 30px; /* Höhe des Buttons */
+		
+		border: 0px solid #ffffff; /* Rahmen */
+		border-radius: 50px; /* Abgerundete Ecken */
+		background: #ffffff; /* Hintergundfarbe für ältere Browser */
+		
+		color: #313131; /* Textfarbe */
+		
+		text-align: center; /* Horizontale Text-Ausrichtung */
+		box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.15);
+		
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+
+		
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		
+		}
+		
+		.button:hover {
+		background: #ffffff; /* Alternative Hintergrundfarbe beim Überfahren */
+		border: 0px solid #ffffff; /* Rahmen */
+		color: #01d28e;
+		
+		box-shadow: 0px 15px 20px rgba(1, 210, 142, 0.1);
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		transform: translateY(-7px);
+		}
+		
+		.formularcontainer {
+		
+		box-shadow: 0px 0px 91px -39px rgba(0,0,0,0.56);
+		background-color: #313131;
+		border-radius: 8px;
+		position: absolute;
+		left: 25%;
+		top: 25%;
+		width:50%;
+		height:50%;
+		}
+		
+		.formularcontainer:hover {
+			box-shadow: 0px 0px 78px -31px rgba(128,128,128,1);
+
+		}
+		
+		
+		
+		.menucontainer {
+		
+		width: 100%;
+		height: 50px;
+		background-color: #313131;
+		left: 0%;
+		top: 0%;
+		position: absolute;
+		}
+		
+		
+		.frontheadline, h1 {
+		
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 40px;
+		letter-spacing: 1px;
+		}
+		
+		.lowerheadline , h2{
+		
+		color: #878787;
+		
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		font-size: 15px;
+		letter-spacing: 1px;
+		}
+		
+		.text {
+		
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		color: #ffffff;
+		}
+		
+		.menupunkt, h3 {
+		
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 15px;
+		}
+
+
+		.a {
+		text-decoration: none;
+		}
+		
+		.a:link {
+		color: #ffffff;
+		}
+		
+		.a:visited {
+		color: #ffffff;
+		}
+		
+		.a:hover {
+		color: #01d28e;
+		}	
+
+		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		color: #ffffff;
+		opacity: 0.5; /* Firefox */		
+		
+		}
