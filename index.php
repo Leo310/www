@@ -39,7 +39,7 @@
 		</form>
 			<tr>
 				<td>
-					<h1 style="margin-top: 40px;" class="text"><center>du hast noch keinen account? jetzt <a href="register.php" class="a">registrieren »</a><center></h1>
+					<h1 style="margin-top: 10%" class="text"><center>du hast noch keinen account? jetzt <a href="register.php" class="a">registrieren »</a><center></h1>
 				</td>
 			</tr>
 			<tr>

@@ -11,7 +11,8 @@ include('include/inc_htmlhead');
 
 <center><div class="formularcontainer">
 	<h1 style="margin-top: 10%;" class="frontheadline">registrierung</h1>
-	<table style="margin-top: 5%;">
+  <h1 class="lowerheadline" style="margin-top:-2%;">neu hier? erstell' dir einfach einen account!</h1>
+	<table style="margin-top: 3%;">
 
 		<form action='scr_register.php' method='post'>
 
@@ -35,7 +36,7 @@ include('include/inc_htmlhead');
 		</table>
 		<table>
 	</div>
-<div style='margin-left:auto; margin-right:auto; margin-top:5%; min-width:200px; width:100%;'>
+<div style='margin-left:auto; margin-right:auto; margin-top:3%; min-width:200px; width:100%;'>
 			<tr>
 				<td>
 					<center><input type='submit' value='registrieren »' class="button"></center>
@@ -44,7 +45,7 @@ include('include/inc_htmlhead');
 			</form>
 				<tr>
 					<td>
-						<h1 style="margin-top: 40px;" class="text"><center>du hast schon einen account? jetzt <a href="index.php" class="a">anmelden »</a></center></h1>
+						<h1 style="margin-top: 10%" class="text" ><center>du hast schon einen account? jetzt <a href="index.php" class="a">anmelden »</a></center></h1>
 					</td>
 				</tr>
 				<tr>
