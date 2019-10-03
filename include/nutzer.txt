@@ -1,7 +1,0 @@
-admin;admin;admin
-testuser;user2;nutzer
-leo;leo;nutzer
-leona;1;nutzer
-leonaa;l;nutzer
-leonnnn;leo;nutzer
-leo221;leo;nutzer
