@@ -12,8 +12,8 @@
 
 <center><div class="formularcontainer">
 	<h1 style="margin-top: 10%;" class="frontheadline">willkommen zurück!</h1>
-	<h1 class="lowerheadline" style="margin-top:-15px;">wir freuen uns, dass du da bist.</h1>
-	<table style="margin-top: 40px;">
+	<h1 class="lowerheadline" style="margin-top:-2%;">wir freuen uns, dass du da bist.</h1>
+	<table style="margin-top: 5%;">
 	
 		<form action='scr_login.php' method='post'>
 			<tr>
@@ -29,7 +29,7 @@
 	</table>
 	<table>
 </div>
-<div style='margin-left:auto; margin-right:auto; margin-top:30px; min-width:200px; width:100%;'>
+<div style='margin-left:auto; margin-right:auto; margin-top:5%; min-width:200px; width:100%;'>
 			<tr>
 				<td>
 					<center><input type='submit' value='anmelden »' class="button"></center>
@@ -43,14 +43,14 @@
 				</td>	
 			</tr>
 			<tr>
-			<td>
-			<?php 
-			if ($error) {
-			echo "<p class='text'>$error</p>"; 
-			unset($_SESSION['error']);
-			}
-		?>
-		</td>
+				<td>
+					<?php 
+						if ($error) {
+						echo "<p class='text'>$error</p>"; 
+						unset($_SESSION['error']);
+						}
+					?>
+				</td>
 		</tr>
 	</table>
 </div>

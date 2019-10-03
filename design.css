@@ -10,7 +10,7 @@
 		height:20px;
 		margin-top: 5px;
 	
-		background-color: #313131; 
+		background-color: Transparent; 
 		border: 3px solid #ffffff; 
 		border-radius: 50px;
 		border-color: #ffffff;
@@ -61,15 +61,82 @@
 		transform: translateY(-7px);
 		}
 		
+		.abmeldebutton {
+		width: 80px;
+		height: 20px; 
+
+		border: 0px solid #ffffff;
+		border-radius: 50px;
+		background: #ffffff;
+		
+		color: #313131;
+		
+		text-align: center;
+		letter-spacing: 0.2px;
+		
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		font-size: 9px;
+		
+		cursor:pointer;
+		}
+		
+		.abmeldebutton:hover {
+		
+		background-color:	Transparent;
+		border: 2px solid #ffffff;
+		border-radius: 50px;
+		color: #ffffff;
+			
+		}
+		
+		.menubutton {
+		width: 150px;
+		height: 25px; 
+
+		border: 0px solid;
+		border-radius: 50px;
+		background: Transparent;
+		
+		color: #ffffff;
+		
+		text-align: center;
+		letter-spacing: 0.2px;
+		
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		
+		transition: all 0.3s ease 0s;
+		cursor:pointer;
+		}
+		
+		.menubutton:hover {
+			
+		transform: translateY(-7px);
+			
+		}
+		
+		.userloggedin {
+		
+		color: #ffffff;
+		
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		}
+		
+		
+		
 		.formularcontainer {
 		
 		box-shadow: 0px 0px 91px -39px rgba(0,0,0,0.56);
 		background-color: #313131;
 		border-radius: 8px;
 		position: absolute;
-		left: 25%;
-		top: 25%;
-		width:50%;
+		left:30%;
+		top:25%;
+		width:40%;
 		height:50%;
 		}
 		

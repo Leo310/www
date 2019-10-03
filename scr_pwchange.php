@@ -28,14 +28,14 @@ foreach ($users as $user) {
 			if($newpw == $bnewpw) {
 				$users[$index] = "$thisuser;$newpw";
 				file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
-				header("Location:pwwurdesaved.php");
-				$_SESSION['pwchanged'] = 'Neues Passwort wurde gespeichert.';		
 				header("Location:pwchange.php");
+				$_SESSION['pwchanged'] = '<font color="#01d28e">neues passwort wurde gespeichert.';
+				
 			} else { 
-						$_SESSION['error'] = 'Eingabe der neuen Kennwörter stimmt nicht überein.';
+						$_SESSION['error'] = '<font color="#ca3e47">eingabe der neuen kennwörter stimmt nicht überein.</font> bitte wiederholen.';
 						header("location:pwchange.php");	
 			}
-		} else { $_SESSION['error'] = 'Eingabe des alten Passworts inkorrekt.';
+		} else { $_SESSION['error'] = '<font color="#ca3e47">eingabe des alten passworts inkorrekt. bitte wiederholen.';
 						header("location:pwchange.php");
 		}
 	}
