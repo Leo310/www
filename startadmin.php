@@ -4,7 +4,7 @@
  if (!isset($_SESSION['user'])) header("location:index.php");
  include("include/inc_htmlhead");
 ?>
-<body class="body" background="images/bild3.jpg"> 
+<body class="body" background="images/bild3.jpg">
 
 <!-- always used menu -->
 <button style="float:right; margin-top:7px; margin-right:10px" class="abmeldebutton" onClick="window.location.href='scr_logout.php'">abmelden »</button>
@@ -17,7 +17,7 @@
 <button style="float:right; margin-top:5px; margin-right:2%px" class="menubutton" onClick="window.location.href='pwchange.php'">passwort ändern</button>
 <button style="float:right; margin-top:5px; margin-right:2%px" class="menubutton" onClick="window.location.href='nutzerListe.php'">nutzerliste</button>
 
-<!-- end of always used menu ----------------------------------------------- -->
+<!-- end of always used menu -->
 
 <!-- optional back button top left --> <button style="float:left; margin-top:5px; margin-left:-25px" class="menubutton" onClick="window.location.href='scr_logout.php'">« zurück</button>
 

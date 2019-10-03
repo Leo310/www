@@ -16,7 +16,7 @@ foreach($users as $user) {
 
 unset($users[$delete]);
 file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
- 
+
 
 session_destroy();
 header("location:index.php");

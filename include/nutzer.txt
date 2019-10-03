@@ -2,6 +2,6 @@ testuser;user2;nutzer
 leo;leo;nutzer
 leonaa;l;nutzer
 leonnn;leo;nutzer
-admin;1314;admin
+admin;admin;admin
 asda;12412;admin
 asfas;1412;nutzer

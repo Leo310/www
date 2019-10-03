@@ -20,4 +20,3 @@ file_put_contents("include/nutzer.txt", $users);
 
 header("location:nutzerListe.php");
 ?>
-

@@ -4,7 +4,7 @@ if(isset($_SESSION['user'])) header("location:start.php");
 $name = $pw = $bpw = "";
 $rechte = "nutzer";
 if(isset($_POST['name'])) $name=$_POST['name'];
-if(isset($_POST['pw'])) $pw =$_POST['pw'];	
+if(isset($_POST['pw'])) $pw =$_POST['pw'];
 if(isset($_POST['bpw'])) $bpw =$_POST['bpw'];
 
 
@@ -22,11 +22,11 @@ foreach($users as $user){
 	}
 }
 if(!$existent){
-	if($pw == $bpw){	
+	if($pw == $bpw){
 	file_put_contents("include/nutzer.txt", "$name;$bpw;$rechte\n", FILE_APPEND);
 	$_SESSION['user'] = $name;
 	header("location:start.php");
-	
+
 }else{
 	$_SESSION['error1'] = '<font color="#ff2e2e">eingabe der passwörter stimmt nicht überein.</font> bitte wiederholen.';
 	header("location:register.php");

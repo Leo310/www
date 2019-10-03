@@ -2,10 +2,10 @@
  session_start();
  // Umleitung bei Aufruf ohne Anmeldung
  $oldpw = $newpw = $bnewpw = "";
- 
+
  if (!isset($_SESSION['user'])) header("location:index.php");
- 
- 
+
+
 if (isset($_POST['oldpw']))   $oldpw = $_POST['oldpw'];
 if (isset($_POST['newpw']))   $newpw = $_POST['newpw'];
 if (isset($_POST['bnewpw']))   $bnewpw = $_POST['bnewpw'];
@@ -16,24 +16,24 @@ $changed = false;
 
 // Nutzerliste in ein Array einlesen, Zeilenumbrüche entfernen
 $users = file("include/nutzer.txt",FILE_IGNORE_NEW_LINES);
-				
+
 //echo "<pre>"; print_r($users); echo "</pre>";
-				
+
 // Die foreach-Schleife ist eine PHP-Spezialität - und sehr bequem
 $index = 0;
-foreach ($users as $user) {	
+foreach ($users as $user) {
 	$daten = explode(";", $user);
-	if($daten[0] == $thisuser) { 
+	if($daten[0] == $thisuser) {
 		if($daten[1] == $oldpw) {
 			if($newpw == $bnewpw) {
 				$users[$index] = "$thisuser;$newpw";
 				file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 				header("Location:pwchange.php");
 				$_SESSION['pwchanged'] = '<font color="#01d28e">neues passwort wurde gespeichert.';
-				
-			} else { 
+
+			} else {
 						$_SESSION['error'] = '<font color="#ff2e2e">eingabe der neuen kennwörter stimmt nicht überein.</font> bitte wiederholen.';
-						header("location:pwchange.php");	
+						header("location:pwchange.php");
 			}
 		} else { $_SESSION['error'] = '<font color="#ff2e2e">eingabe des alten passworts inkorrekt.</font> bitte wiederholen.';
 						header("location:pwchange.php");
@@ -47,5 +47,3 @@ foreach ($users as $user) {
 
 
  ?>
-
-

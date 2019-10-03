@@ -14,7 +14,7 @@ include('include/inc_htmlhead');
 	<table style="margin-top: 5%;">
 
 		<form action='scr_register.php' method='post'>
-		
+
 			<tr>
 				<td>
 					<input class="inputRahmen" type='text' id='nutzername' name='name' placeholder="nutzername" required>
@@ -34,7 +34,7 @@ include('include/inc_htmlhead');
 			</tr>
 		</table>
 		<table>
-	</div> 
+	</div>
 <div style='margin-left:auto; margin-right:auto; margin-top:5%; min-width:200px; width:100%;'>
 			<tr>
 				<td>
@@ -63,10 +63,8 @@ include('include/inc_htmlhead');
 					</td>
 				</tr>
 			</table>
-</div>			
-			
+</div>
+
 
 </body>
 </html>
-
-
