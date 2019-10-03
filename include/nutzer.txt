@@ -1,6 +1,6 @@
 admin;admin;admin
 testuser;user2;nutzer
-l eo;leo;nutzer
+leo;leo;nutzer
 leona;1;nutzer
 leonaa;l;nutzer
 leonnnn;leo;nutzer
