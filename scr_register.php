@@ -24,8 +24,10 @@ foreach($users as $user){
 }
 
 if(!$existent){
-	if($pw == $bpw){	
-	file_put_contents("include/nutzer.txt", "$name;$bpw;$rechte\n", FILE_APPEND);
+	if($pw == $bpw){
+	$userarray = array($name, $pw, $rechte);
+	$user = implode(";", $userarray);
+	file_put_contents("include/nutzer.txt", "\n".$user, FILE_APPEND);
 	$_SESSION['user'] = $name;
 	header("location:start.php");
 	
