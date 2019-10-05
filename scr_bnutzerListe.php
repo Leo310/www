@@ -15,8 +15,15 @@ $delete = -1;
 		
 foreach($users as $user){
 	$daten = explode(";",$user);
-	if($newrechte == "admin"  || $newrechte == "nutzer"){
+	if($newrechte == "admin"  || $newrechte == "nutzer" || !$newrechte){
 	if ($name == $daten[0]){
+		if(!$newname){
+			$newname = $daten[0];
+		}if(!$newpw){
+			$newpw = $daten[1];
+		}if (!$newrechte){
+			$newrechte = $daten[2];
+		}
 	$users[$index] = "$newname;$newpw;$newrechte";
 	file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 }
