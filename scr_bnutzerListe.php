@@ -8,7 +8,7 @@ if(isset($_POST['newpw'])) $newpw = $_POST['newpw'];
 if(isset($_POST['newrechte'])) $newrechte = $_POST['newrechte'];
 
 
-$users = file("include/nutzer.txt");
+$users = file("include/nutzer.txt", FILE_IGNORE_NEW_LINES);
 
 $index = 0;
 $delete = -1;
@@ -16,32 +16,17 @@ $delete = -1;
 foreach($users as $user){
 	$daten = explode(";",$user);
 	if($newrechte == "admin"  || $newrechte == "nutzer"){
-	if ($name == $daten[0]) $delete = $index;
-	$index++;
-	if($daten[0] == $name){
-	unset($users[$delete]);
-	file_put_contents("include/nutzer.txt", $users);
-	file_put_contents("include/nutzer.txt", "$newname;$newpw;$newrechte\n",FILE_APPEND);
-	}
+	if ($name == $daten[0]){
+	$users[$index] = "$newname;$newpw;$newrechte";
+	file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
+}
 }else{
 	$_SESSION['error2'] = "Geben sie bei den Rechten entweder admin oder nutzer ein.";
 	header("location:nutzerListe.php");
 }	
-}
+	$index++;
 
-// foreach($users as $user){
-	// $index++;
-	// $daten = explode(";",$user);
-	// if($newrechte == "admin"  || $newrechte == "nutzer"){
-	// if ($name == $daten[0]){
-	// $users[$index] = "$newname;$newpw;$newrechte";
-	// file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
-// }else{
-	// $_SESSION['error2'] = "Geben sie bei den Rechten entweder admin oder nutzer ein.";
-	// header("location:nutzerListe.php");
-// }	
-// }
-// }
+}
 
 header("location:nutzerListe.php");
 
