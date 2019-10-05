@@ -25,7 +25,7 @@ $users = file("include/nutzer.txt",FILE_IGNORE_NEW_LINES);
 foreach($users as $user){
 	$daten = explode(";",$user);
 	echo "<tr><td>".$daten[0]."</td><td>".$daten[1]."</td><td>".$daten[2]."</td>";
-	echo "<td><form action='bnutzerListe.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input type='submit' value='✎'></form></td><td><form action='scr_nutzerLoeschen.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input type='submit' value='🗑'></form></td></tr>\n";	
+	echo "<td><form action='bnutzerListe.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input type='submit' value='✎'></form></td><td><form action='scr_deleteser.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input type='submit' value='🗑'></form></td></tr>\n";	
 }
 
 ?>

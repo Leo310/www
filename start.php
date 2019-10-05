@@ -14,7 +14,10 @@
 
 
 <button style="float:right; margin-top:5px; margin-right:2%" class="menubutton" onClick="window.location.href='scr_deleteuser.php'">account löschen</button>
-<button style="float:right; margin-top:5px; margin-right:2%px" class="menubutton" onClick="window.location.href='pwchange.php'">passwort ändern</button>
+<?php
+	$name = $_SESSION['user'];
+?>
+<button style="float:right; margin-top:5px; margin-right:2%px" class="menubutton" onClick="window.location.href='pwchange.php'" method='post' name='name'>passwort ändern</button>
 
 <!-- end of always used menu ----------------------------------------------- -->
 
