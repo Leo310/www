@@ -29,7 +29,6 @@ foreach ($users as $user) {
 			if($newpw == $bnewpw) {
 				$users[$index] = "$thisuser;$newpw;$rechte";
 				file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
-				file_put_contents("include/nutzer.txt", "\n", FILE_APPEND);
 				header("Location:pwchange.php");
 				$_SESSION['pwchanged'] = '<font color="#01d28e">neues passwort wurde gespeichert.';
 				
