@@ -25,8 +25,9 @@ $index = 0;
 foreach ($users as $user) {
 	$daten = explode(";", $user);
 	if($daten[0] == $thisuser) {
-		if($daten[1] == $oldpw) {
+		if(password_verify($oldpw, $daten[1])) {
 			if($newpw == $bnewpw) {
+				$newpw = password_hash($newpw, PASSWORD_DEFAULT);
 				$users[$index] = "$thisuser;$newpw;$rechte";
 				file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 				header("Location:pwchange.php");
