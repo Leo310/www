@@ -13,7 +13,7 @@
   <h1 style="float:right; margin-top:0.7%; margin-right:3%" class="userloggedin">|</h2>
 
 
-  <button style="float:right; margin-top:0.4%; margin-right:2%" class="menubutton" onClick="window.location.href='scr_deleteuser.php'">account löschen</button>
+  <button style="float:right; margin-top:0.4%; margin-right:2%" class="menubutton" onClick="window.location.href='deleteuser.php'">account löschen</button>
   <button style="float:right; margin-top:0.4%; margin-right:0.3%" class="menubutton" onClick="window.location.href='pwchange.php'">passwort ändern</button>
   <!-- end of always used menu -->
 

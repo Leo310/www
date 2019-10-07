@@ -15,20 +15,20 @@
   <!-- always used menu -->
   <button style="float:right; margin-top:0.5%; margin-right:1%" class="abmeldebutton" onClick="window.location.href='scr_logout.php'">abmelden »</button>
 
-  <h1 style="float:right; margin-top:0.7%; margin-right:2%; color: #ff2e2e;" class="userloggedin"><?php echo $_SESSION['user'];?></h2>
+  <h1 style="float:right; margin-top:0.7%; margin-right:2%" class="userloggedin"><?php echo $_SESSION['user'];?></h2>
   <h1 style="float:right; margin-top:0.7%; margin-right:3%" class="userloggedin">|</h2>
 
 
-  <button style="float:right; margin-top:0.4%; margin-right:2%" class="menubutton" onClick="window.location.href='scr_deleteuser.php'">account löschen</button>
+  <button style="float:right; margin-top:0.4%; margin-right:2%" class="menubutton" onClick="window.location.href='deleteuser.php'">account löschen</button>
   <button style="float:right; margin-top:0.4%; margin-right:0.3%" class="menubutton" onClick="window.location.href='pwchange.php'">passwort ändern</button>
 
   <!-- end of always used menu -->
-
+  <!-- optional back button top left --> <button style="float:left; margin-top:0.4%; margin-left:-1%" class="menubutton" onClick="history.back();">« zurück</button>
 
 
 
 <center><div class="formularcontainer">
-	<h1 style="margin-top: 10%;" class="frontheadline">passwort ändern</h1>
+	<h1 style="margin-top: 10%;" class="frontheadline">kennwort ändern</h1>
 		<table style="margin-top: 5%;">
 
 			<form action='scr_pwchange.php' method='post'>
@@ -52,14 +52,18 @@
 	</div>
 <div style='margin-left:auto; margin-right:auto; margin-top:5%; min-width:200px; width:100%;'>
 				<tr>
+          <td>
+            <button class="button" onclick="history.back();" style="margin-left: -5%">« abbrechen</button>
+          </td>
 					<td>
-						<center><input type='submit' value='änderungen speichern' class="button"></center>
+						<input type='submit' value='speichern »' class="confirmbutton" style="margin-left: 5%">
 					</td>
 				</tr>
 			</form>
-				<tr>
-					<td>
-						<p style="margin-top: 40px;"></p>
+    </table>
+				<!-- <tr>
+					<td> -->
+						<center><p style="margin-top: 40px;"></p>
 						<?php
 							  if ($error) {
 								  echo "<p class='text'>$error</p>";
@@ -70,10 +74,10 @@
 								  echo "<p class='text'>$pwchanged</hp>";
 								  unset($_SESSION['pwchanged']);
 							  }
-						?>
-					</td>
-				</tr>
-			</table>
+						?></center>
+					<!-- </td>
+				</tr> -->
+			<!-- </table>  -->
 </div>
 
 </body>
