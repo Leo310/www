@@ -25,7 +25,7 @@ foreach($users as $user) {
 	if ($pw == $daten[1]) {
 
 		unset($users[$delete]);
-		file_put_contents("include/nutzer.txt", implode($users));
+		file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 
 
 		session_destroy();
