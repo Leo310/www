@@ -8,7 +8,7 @@ $existent = false;
 $_SESSION['rechte'] = $rechte;
 
 if(isset($_POST['name'])) $name=$_POST['name'];
-if(isset($_POST['pw'])) $pw =$_POST['pw'];	
+if(isset($_POST['pw'])) $pw =$_POST['pw'];
 if(isset($_POST['bpw'])) $bpw =$_POST['bpw'];
 
 
@@ -30,7 +30,7 @@ if(!$existent){
 	file_put_contents("include/nutzer.txt", "\n".$user, FILE_APPEND);
 	$_SESSION['user'] = $name;
 	header("location:start.php");
-	
+
 }else{
 	$_SESSION['error1'] = '<font color="#ff2e2e">eingabe der passwörter stimmt nicht überein.</font> bitte wiederholen.';
 	header("location:register.php");

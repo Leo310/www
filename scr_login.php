@@ -5,7 +5,7 @@ if (isset($_SESSION['user'])) header("location:start.php");
 $name = $pw = "";
 $vergleichRecht = "admin";
 
-if (isset($_POST['name'])) $name = $_POST['name']; 
+if (isset($_POST['name'])) $name = $_POST['name'];
 if (isset($_POST['pw']))   $pw = $_POST['pw'];
 
 // Nutzerliste in ein Array einlesen, Zeilenumbrüche entfernen
@@ -44,7 +44,7 @@ switch ($found) {
     case 2:
         header("location:start.php");
         break;
-} 
+}
 
 
 ?>

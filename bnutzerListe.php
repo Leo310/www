@@ -17,9 +17,9 @@ foreach($users as $user){
 	$name = $_POST['name'];
 	$daten = explode(";",$user);
 	if($name == $daten[0]){
-		echo "<tr><td><form action='scr_bnutzerListe.php' method='post'><input type='hidden' name='name' value='$name'><input type='text' id='nutzername' name='newname' placeholder='".$daten[0]."'></td><td><input type='text' id='password' name='newpw' placeholder='".$daten[1]."'></td><td><input type='text' id='rechte' name='newrechte' placeholder='".$daten[2]."'><input type='submit' value='✓'></td></tr>\n";	
+		echo "<tr><td><form action='scr_bnutzerListe.php' method='post'><input type='hidden' name='name' value='$name'><input type='text' id='nutzername' name='newname' placeholder='".$daten[0]."'></td><td><input type='text' id='password' name='newpw' placeholder='".$daten[1]."'></td><td><input type='text' id='rechte' name='newrechte' placeholder='".$daten[2]."'><input type='submit' value='✓'></td></tr>\n";
 	}else{
-	echo "<tr><td>".$daten[0]."</td><td>".$daten[1]."</td><td>".$daten[2]."</td><td>\n";	
+	echo "<tr><td>".$daten[0]."</td><td>".$daten[1]."</td><td>".$daten[2]."</td><td>\n";
 	}
 	}
 
