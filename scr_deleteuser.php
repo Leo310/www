@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['user'])) header("location:index.php");
 $uname = $_SESSION['user'];
 
-$users = file("include/nutzer.txt");
+$users = file("include/nutzer.txt", FILE_IGNORE_NEW_LINES);
 
 $index = 0;
 $delete = -1;

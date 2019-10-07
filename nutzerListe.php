@@ -3,6 +3,7 @@ session_start();
 include("include/inc_htmlhead");
 $error2 = "";
 if(isset($_SESSION['error2'])) $error2 = $_SESSION['error2'];
+if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 
 ?>
 

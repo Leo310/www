@@ -8,7 +8,6 @@
  $pwchanged = "";
  if (isset($_SESSION['error'])) $error = $_SESSION['error'];
  if (isset($_SESSION['pwchanged'])) $error = $_SESSION['pwchanged'];
- 
 ?>
 <body class="body" background="images/bild3.jpg">
 
@@ -30,8 +29,11 @@
 <center><div class="formularcontainer">
 	<h1 style="margin-top: 10%;" class="frontheadline">passwort ändern</h1>
 		<table style="margin-top: 5%;">
-
 			<form action='scr_pwchange.php' method='post'>
+				<?php
+				 if (isset($_SESSION['rechte'])) $rechte = $_SESSION['rechte'];
+				 echo "<input type='hidden' name='rechte' value='$rechte'>";
+				?>
 				<tr>
 					<td>
 						<input class="inputRahmen" type='password' name='oldpw' id='altespw' placeholder="altes kennwort" required>

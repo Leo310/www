@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['user'])) header("location:start.php");
 
 $name = $pw = "";
-$rechte = "admin";
+$vergleichRecht = "admin";
 
 if (isset($_POST['name'])) $name = $_POST['name']; 
 if (isset($_POST['pw']))   $pw = $_POST['pw'];
@@ -18,7 +18,10 @@ foreach ($users as $user) {
   // explode zerlegt den String in ein Array, das Trennzeichen ist frei wählbar
   $daten = explode(";", $user);
   if ($name == $daten[0] && $pw == $daten[1]) {
-	if($rechte == $daten[2]){
+	    $_SESSION['pw'] = $daten[1];
+	    $_SESSION['rechte'] = $daten[2];
+		$rechte = $_SESSION['rechte'];
+	if($vergleichRecht == $rechte){
 		//auf adminseite
 		$found = 1;
 		$_SESSION['user'] = $daten[0];
@@ -27,6 +30,7 @@ foreach ($users as $user) {
     $_SESSION['user'] = $daten[0];
 	}
   }
+
 
 }
 switch ($found) {

@@ -9,6 +9,7 @@
 if (isset($_POST['oldpw']))   $oldpw = $_POST['oldpw'];
 if (isset($_POST['newpw']))   $newpw = $_POST['newpw'];
 if (isset($_POST['bnewpw']))   $bnewpw = $_POST['bnewpw'];
+if (isset($_POST['rechte']))   $rechte = $_POST['rechte'];
 
 $thisuser = $_SESSION['user'];
 
@@ -26,7 +27,7 @@ foreach ($users as $user) {
 	if($daten[0] == $thisuser) { 
 		if($daten[1] == $oldpw) {
 			if($newpw == $bnewpw) {
-				$users[$index] = "$thisuser;$newpw";
+				$users[$index] = "$thisuser;$newpw;$rechte";
 				file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 				header("Location:pwchange.php");
 				$_SESSION['pwchanged'] = '<font color="#01d28e">neues passwort wurde gespeichert.';
@@ -42,7 +43,6 @@ foreach ($users as $user) {
 	$index++;
 }
 
-//echo "<pre>"; print_r($users); echo "</pre>";
 
 
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("include/inc_htmlhead");
-
+if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 ?>
 
 <h1>nutzerliste</h1>
