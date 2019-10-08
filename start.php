@@ -12,12 +12,12 @@
 <h1 style="float:right; margin-top:11px; margin-right:2%" class="userloggedin"><?php echo $_SESSION['user'];?></h2>
 <h1 style="float:right; margin-top:11px; margin-right:3%" class="userloggedin">|</h2>
 
-
-<button style="float:right; margin-top:5px; margin-right:2%" class="menubutton" onClick="window.location.href='scr_deleteuser.php'">account löschen</button>
 <?php
 	$name = $_SESSION['user'];
+	echo "<form action='scr_deleteuser.php' method='post'><input type='hidden' name='name' value='$name'><button style='float:right; margin-top:5px; margin-right:2%' class='menubutton' type='submit'>account löschen</button></form>";
 ?>
-<button style="float:right; margin-top:5px; margin-right:2%px" class="menubutton" onClick="window.location.href='pwchange.php'" method='post' name='name'>passwort ändern</button>
+
+<button style="float:right; margin-top:5px; margin-right:2%px" class="menubutton" onClick="window.location.href='pwchange.php'">passwort ändern</button>
 
 <!-- end of always used menu ----------------------------------------------- -->
 
