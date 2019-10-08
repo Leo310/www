@@ -4,10 +4,10 @@
  if (!isset($_SESSION['user'])) header("location:index.php");
  include("include/inc_htmlhead");
 
- $error = "";
+ $error = $error1 = "";
  $pwchanged = "";
  if (isset($_SESSION['error'])) $error = $_SESSION['error'];
- if (isset($_SESSION['pwchanged'])) $error = $_SESSION['pwchanged'];
+ if (isset($_SESSION['pwchanged'])) $error1 = $_SESSION['pwchanged'];
 ?>
 <body class="body" background="images/bild3.jpg">
 
@@ -55,7 +55,7 @@
 <div style='margin-left:auto; margin-right:auto; margin-top:5%; min-width:200px; width:100%;'>
 				<tr>
           <td>
-            <button class="button" onclick="history.back();" style="margin-left: -5%">« abbrechen</button>
+            <button class="button" onclick="window.location.href='start.php'" style="margin-left: -5%">« abbrechen</button>
           </td>
 					<td>
 						<input type='submit' value='speichern »' class="confirmbutton" style="margin-left: 5%">
@@ -72,8 +72,8 @@
 								  unset($_SESSION['error']);
 							  }
 
-							  if ($pwchanged) {
-								  echo "<p class='text'>$pwchanged</hp>";
+							  if ($error1) {
+								  echo "<p class='text'>$error1</hp>";
 								  unset($_SESSION['pwchanged']);
 							  }
 						?></center>
