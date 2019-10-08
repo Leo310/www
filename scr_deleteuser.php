@@ -15,18 +15,29 @@ $index = 0;
 $delete = -1;
 
 if($uname == $name){
-	foreach($users as $user) {
-
 
 // löschvorgang
 foreach($users as $user) {
 	$daten = explode(";", $user);
-	if ($uname == $daten[0]) $delete = $index;
+	if ($uname == $daten[0]) {
+		$delete = $index;
+		if (password_verify($pw, $daten[1])) {
+
+		unset($users[$delete]);
+		file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
+
+
+		session_destroy();
+		header("location:index.php");
+		} else if($_SESSION['rechte'] == "admin"){
+			header("location:deleteuser.php");
+		}else {
+			$_SESSION['error4'] = '<font color="#ff2e2e">kennwort inkorrekt.</font> bitte wiederholen.';
+			header("location:deleteuser.php");
+		}
+	}
 	$index++;
-
-
-session_destroy();
-header("location:index.php");
+}
 } else{
 	foreach($users as $user) {
 	$daten = explode(";", $user);
@@ -41,18 +52,5 @@ file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 header("location:nutzerListe.php");
 }
 
-	if ($pw == $daten[1]) {
 
-		unset($users[$delete]);
-		file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
-
-
-		session_destroy();
-		header("location:index.php");
-} else {
-$_SESSION['error4'] = '<font color="#ff2e2e">kennwort inkorrekt.</font> bitte wiederholen.';
-header("location:deleteuser.php");
-
-}
-}
 ?>

@@ -4,11 +4,11 @@
  if (!isset($_SESSION['user'])) header("location:index.php");
  include("include/inc_htmlhead");
 
- $error4 = "";
+ $error4 = $name = "";
 
  if (isset($_SESSION['error4'])) $error4 = $_SESSION['error4'];
-
-
+  
+ 
 ?>
 <body class="body" background="images/bild3.jpg">
 
@@ -33,6 +33,10 @@
   			<form action='scr_deleteuser.php' method='post'>
   				<tr>
   					<td>
+					<?php
+					$name = $_SESSION['user'];
+					echo "<input type='hidden' name='name' value='$name'>";
+					?>
   						<input class="inputRahmen" type='password' name='pw' id='pw' placeholder="kennwort" required>
   					</td>
   				</tr>
