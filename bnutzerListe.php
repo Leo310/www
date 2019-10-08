@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("include/inc_htmlhead");
+include('include/inc_htmlkopfzeile.php');
 if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 ?>
 
