@@ -55,7 +55,7 @@
 <div style='margin-left:auto; margin-right:auto; margin-top:5%; min-width:200px; width:100%;'>
 				<tr>
           <td>
-            <button class="button" onclick="history.back();" style="margin-left: -5%">« abbrechen</button>
+            <button class="button" onclick="window.location.href='start.php'" style="margin-left: -5%">« abbrechen</button>
           </td>
 					<td>
 						<input type='submit' value='speichern »' class="confirmbutton" style="margin-left: 5%">
