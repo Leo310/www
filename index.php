@@ -1,8 +1,9 @@
 <?php
   session_start();
   // ist jemand angemeldet?
-  if (isset($_SESSION['user'])) header("location:start.php");
-
+  if (isset($_SESSION['user']) && $_SESSION['rechte'] == "admin") header("location:startadmin.php");
+  if (isset($_SESSION['user']) && $_SESSION['rechte'] == "nutzer") header("location:start.php");
+  
   include('include/inc_htmlhead');
 
   $error = "";
