@@ -7,7 +7,7 @@ if(isset($_SESSION['error2'])) $error2 = $_SESSION['error2'];
 if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 
 ?>
-
+<h1 style='display:inline;'>nutzerliste</h1>
 <?php
 	if($error2){
 		echo "<p>$error2</p>";
