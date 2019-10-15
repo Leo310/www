@@ -8,7 +8,6 @@ if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 
 ?>
 
-<h1>Nutzerliste</h1>
 <?php
 	if($error2){
 		echo "<p>$error2</p>";
