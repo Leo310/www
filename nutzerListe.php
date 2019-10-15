@@ -16,17 +16,18 @@ if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 ?>
 <!-- <div style='margin-left:auto; margin-right:auto; margin-top:150px; min-width:500px; width:50%;'> -->
 <center><div class="userlistcontainer">
-<table>
+<h1 style="margin-top: 3%;" class="frontheadline">admininterface: nutzerübersicht</h1>
+<table cellspacing="5" cellpadding="3" style="margin-top: 3%;">
 <thead>
-<tr><th>Nutzername</th><th>Passwort</th><th>Rechte</th></tr>
+<tr><th class="tablehead">nutzername</th><th class="tablehead">passwort</th><th class="tablehead">rechte</th></tr>
 </thead>
-<tbody>
+<tbody class="tablecontent">
 <?php
 $users = file("include/nutzer.txt",FILE_IGNORE_NEW_LINES);
 foreach($users as $user){
 	$daten = explode(";",$user);
 	echo "<tr><td>".$daten[0]."</td><td>".$daten[1]."</td><td>".$daten[2]."</td>";
-	echo "<td><form action='bnutzerListe.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input type='submit' value='✎'></form></td><td><form action='scr_deleteuser.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input type='submit' value='🗑'></form></td></tr>\n";
+	echo "<td><form action='bnutzerListe.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input class='interfaceInput' type='submit' value='✎'></form></td><td><form action='scr_deleteuser.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input class='interfaceInput' type='submit' value='🗑'></form></td></tr>\n";
 }
 
 ?>
