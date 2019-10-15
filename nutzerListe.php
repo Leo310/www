@@ -7,14 +7,15 @@ if(isset($_SESSION['error2'])) $error2 = $_SESSION['error2'];
 if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 
 ?>
-<h1 style='display:inline;'>nutzerliste</h1>
+
 <?php
 	if($error2){
 		echo "<p>$error2</p>";
 		unset($_SESSION['error2']);
 	}
 ?>
-<div style='margin-left:auto; margin-right:auto; margin-top:150px; min-width:500px; width:50%;'>
+<!-- <div style='margin-left:auto; margin-right:auto; margin-top:150px; min-width:500px; width:50%;'> -->
+<center><div class="userlistcontainer">
 <table>
 <thead>
 <tr><th>Nutzername</th><th>Passwort</th><th>Rechte</th></tr>
