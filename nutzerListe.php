@@ -8,7 +8,7 @@ if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 
 <!-- <div style='margin-left:auto; margin-right:auto; margin-top:150px; min-width:500px; width:50%;'> -->
 <center><div class="userlistcontainer">
-<h1 style="margin-top: 3%;" class="frontheadline">admininterface: nutzerübersicht</h1>
+<h1 style="margin-top: 3%;" class="frontheadline">nutzerübersicht</h1>
 <table cellspacing="5" cellpadding="4" style="margin-top: 3%;">
 <thead>
 <tr><th class="tablehead" style="width:200px">nutzername</th><th class="tablehead" style="width:500px">kennwort</th><th class="tablehead" style="width:90px">rechte</th></tr>

@@ -7,7 +7,7 @@ if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 
 
 <center><div class="userlistcontainer">
-<h1 style="margin-top: 3%;" class="frontheadline">admininterface: bearbeitungsmodus</h1>
+<h1 style="margin-top: 3%;" class="frontheadline">bearbeitungsmodus</h1>
 <table cellspacing="5" cellpadding="4" style="margin-top: 3%">
 <thead>
 <tr><th class="tablehead" style="width:200px">nutzername</th><th class="tablehead" style="width:500px">kennwort</th><th class="tablehead" style="width:90px">rechte</th></tr>
