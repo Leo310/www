@@ -5,22 +5,23 @@ include('include/inc_htmlkopfzeile.php');
 if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 ?>
 
-<h1>nutzerliste</h1>
-<div style='margin-left:auto; margin-right:auto; margin-top:150px; min-width:500px; width:50%;'>
-<table>
+
+<center><div class="userlistcontainer">
+<h1 style="margin-top: 3%;" class="frontheadline">admininterface: bearbeitungsmodus</h1>
+<table cellspacing="5" cellpadding="4" style="margin-top: 3%">
 <thead>
-<tr><th>Nutzername</th><th>Passwort</th><th>Rechte</th></tr>
+<tr><th class="tablehead" style="width:200px">nutzername</th><th class="tablehead" style="width:500px">kennwort</th><th class="tablehead" style="width:90px">rechte</th></tr>
 </thead>
-<tbody>
+<tbody class="tablecontent">
 <?php
 $users = file("include/nutzer.txt",FILE_IGNORE_NEW_LINES);
 foreach($users as $user){
 	$name = $_POST['name'];
 	$daten = explode(";",$user);
 	if($name == $daten[0]){
-		echo "<tr><td><form action='scr_bnutzerListe.php' method='post'><input type='hidden' name='name' value='$name'><input type='text' id='nutzername' name='newname' placeholder='".$daten[0]."'></td><td><input type='text' id='password' name='newpw' placeholder='".$daten[1]."'></td><td><select name='newrechte' size='2' multiple><option>admin</option><option selected>nutzer</option></select></td><td><input type='submit' value='✓'></td></tr>\n";
+		echo "<tr><td><form action='scr_bnutzerListe.php' method='post'><input type='hidden' name='name' value='$name'><input class='inputnamebyadmin' type='text' id='nutzername' name='newname' placeholder='".$daten[0]."'></td><td><input class='inputpwbyadmin' type='text' id='password' name='newpw' placeholder='kennwort zuweisen'></td><td><select name='newrechte' size='1'><option>admin</option><option selected>nutzer</option></select></td><td><input class='interfaceedit' type='submit' value='✓'></td><td><input class='interfacedelete' type='submit' value='nutzer löschen'></form></td></tr>\n";
 	}else{
-	echo "<tr><td>".$daten[0]."</td><td>".$daten[1]."</td><td>".$daten[2]."</td><td>\n";
+	echo "<tr><td style='width:200px'>".$daten[0]."</td><td style='width:500px'>".$daten[1]."</td><td style='width:90px'>".$daten[2]."</td><td>\n";
 	}
 	}
 

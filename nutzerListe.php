@@ -19,14 +19,14 @@ if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 <h1 style="margin-top: 3%;" class="frontheadline">admininterface: nutzerübersicht</h1>
 <table cellspacing="5" cellpadding="4" style="margin-top: 3%;">
 <thead>
-<tr><th class="tablehead">nutzername</th><th class="tablehead">passwort</th><th class="tablehead">rechte</th></tr>
+<tr><th class="tablehead" style="width:200px">nutzername</th><th class="tablehead" style="width:500px">kennwort</th><th class="tablehead" style="width:90px">rechte</th></tr>
 </thead>
 <tbody class="tablecontent">
 <?php
 $users = file("include/nutzer.txt",FILE_IGNORE_NEW_LINES);
 foreach($users as $user){
 	$daten = explode(";",$user);
-	echo "<tr><td>".$daten[0]."</td><td>".$daten[1]."</td><td>".$daten[2]."</td>";
+	echo "<tr><td style='width:200px'>".$daten[0]."</td><td style='width:500px'>".$daten[1]."</td><td style='width:90px'>".$daten[2]."</td>";
 	echo "<td><form action='bnutzerListe.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input class='interfaceedit' type='submit' value='✎'></form></td><td><form action='scr_deleteuser.php' method='post'><input type='hidden' name='name' value='".$daten[0]."'><input class='interfacedelete' type='submit' value='nutzer löschen'></form></td></tr>\n";
 }
 
