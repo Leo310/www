@@ -19,7 +19,14 @@ foreach($users as $user){
 	$name = $_POST['name'];
 	$daten = explode(";",$user);
 	if($name == $daten[0]){
-		echo "<tr><td style='width:200px'><form action='scr_bnutzerListe.php' method='post'><input type='hidden' name='name' value='$name'><input class='inputnamebyadmin' type='text' id='nutzername' name='newname' placeholder='".$daten[0]."'></td><td style='width:500px'><input class='inputpwbyadmin' type='text' id='password' name='newpw' placeholder='kennwort zuweisen'></td><td style='width:90px'><select name='newrechte' size='1' required><option value='' disabled selected>gruppe</option><option>admin</option><option>nutzer</option></select></td><td><input class='interfaceedit' type='submit' value='✓'></td><td><input class='interfacedeleteunsichtbar' type='submit' value='nutzer löschen'></td></tr>\n";
+		echo "<tr><td style='width:200px'><form action='scr_bnutzerListe.php' method='post'><input type='hidden' name='name' value='$name'><input class='inputnamebyadmin' type='text' id='nutzername' name='newname' placeholder='".$daten[0]."'></td><td style='width:500px'><input class='inputpwbyadmin' type='text' id='password' name='newpw' placeholder='kennwort zuweisen'></td>";
+		echo "<td style='width:90px'><select name='newrechte' size='1'>";
+		if($daten[0] == "admin") {
+			echo "<option selected>admin</option><option>nutzer</option>";
+		}else {
+			echo "<option>admin</option><option selected>nutzer</option>";
+		}
+		echo "</select></td><td><input class='interfaceedit' type='submit' value='✓'></td><td><input class='interfacedeleteunsichtbar' type='submit' value='nutzer löschen'></td></tr>\n";
 	}else{
 	echo "<tr><td style='width:200px'>".$daten[0]."</td><td style='width:500px'>".$daten[1]."</td><td style='width:90px'>".$daten[2]."</td><td>\n";
 	}
