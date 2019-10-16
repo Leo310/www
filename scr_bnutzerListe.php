@@ -4,9 +4,10 @@ $name = $newname = $newpw = $newrechte = "";
 
 if(isset($_POST['name'])) $name = $_POST['name'];
 if(isset($_POST['newname'])) $newname = $_POST['newname'];
-if(isset($_POST['newpw'])) $newpw = password_hash($_POST['newpw'], PASSWORD_DEFAULT);
+if(isset($_POST['newpw'])){
+	if($_POST['newpw'])$newpw = password_hash($_POST['newpw'], PASSWORD_DEFAULT);
+} 
 if(isset($_POST['newrechte'])) $newrechte = $_POST['newrechte'];
-
 
 $users = file("include/nutzer.txt", FILE_IGNORE_NEW_LINES);
 
