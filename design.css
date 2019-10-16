@@ -27,6 +27,8 @@
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 600;
 		font-size: 11px;
+
+		outline: none;
 		}
 
 		.button {
@@ -49,6 +51,8 @@
 
 		transition: all 0.3s ease 0s;
 		cursor: pointer;
+
+		outline: none;
 
 		}
 
@@ -82,6 +86,7 @@
 		font-size: 9px;
 
 		cursor:pointer;
+		outline: none;
 		}
 
 		.abmeldebutton:hover {
@@ -112,6 +117,7 @@
 
 		transition: all 0.4s ease 0s;
 		cursor:pointer;
+		outline: none;
 		}
 
 		.menubutton:hover {
@@ -247,7 +253,7 @@
 
 		transition: all 0.3s ease 0s;
 		cursor: pointer;
-
+		outline: none;
 		}
 
 		.confirmbutton:hover {
@@ -317,7 +323,7 @@
 		cursor:pointer;
 
 		transition: all 0.3s ease 0s;
-
+		outline: none;
 		}
 
 		input.interfaceedit:hover {
@@ -346,6 +352,7 @@
 		padding: 5px 5px 5px 5px;
 
 		transition: all 0.3s ease 0s;
+		outline: none;
 		}
 
 		input.interfacedelete:hover {
@@ -372,8 +379,8 @@
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 600;
 		font-size: 9px;
+		outline: none;
 
-		
 		padding: 5px 5px 5px 5px;
 
 		transition: all 0.3s ease 0s;
@@ -390,7 +397,7 @@
 
 			color: #ffffff;
 
-
+			outline: none;
 
 			text-align: left;
 
@@ -410,7 +417,7 @@
 
 			color: #ffffff;
 
-
+			outline: none;
 
 			text-align: left;
 
@@ -424,17 +431,22 @@ select {
 	margin-left: -4.5%;
 	width: 90px;
 	height:22px;
-	color: #ffffff;
+
 	text-align: left;
 	letter-spacing: 0.1px;
 
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
-	font-size: 12px;
+	font-weight: 600;
+	font-size: 11px;
+	color: #ffffff;
+	opacity: 0.5; /* Firefox */
 
-	background-color: Transparent;
+	background-color: #272727;
 	border: 0px solid #ffffff;
 	border-radius: 5px;
 	border-color: #ffffff;
+
+	outline: none;
+	cursor: pointer;
 }
 
