@@ -2,18 +2,10 @@
 session_start();
 include("include/inc_htmlhead");
 include('include/inc_htmlkopfzeile.php');
-$error2 = "";
-if(isset($_SESSION['error2'])) $error2 = $_SESSION['error2'];
 if ($_SESSION['rechte'] !== "admin") header("location:index.php");
 
 ?>
 
-<?php
-	if($error2){
-		echo "<p>$error2</p>";
-		unset($_SESSION['error2']);
-	}
-?>
 <!-- <div style='margin-left:auto; margin-right:auto; margin-top:150px; min-width:500px; width:50%;'> -->
 <center><div class="userlistcontainer">
 <h1 style="margin-top: 3%;" class="frontheadline">admininterface: nutzerübersicht</h1>
