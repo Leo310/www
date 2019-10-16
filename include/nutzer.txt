@@ -1,3 +1,6 @@
-hans;$2y$10$wT2XmO/GcvgUeu7mjCTgoewKa.k8lN63H6ANs2NPskc.52tjyDu.m;nutzer
-testuser;$2y$10$4Ir5qgnXD2t1D2sPlRb66uFsCuLD/s3QOHSQpxiJOX1H2OumHF3Nq;nutzer
-leo;$2y$10$Mo1XgVzKr5t.BgJSugNqIOHXARjvuFFYe6W.T//0fWhfnjr/rx2Yu;admin
+admin;$2y$10$1hXYKVJcpLx01t8RJRPGPeYddsrceyDSh9Vk2rKUkDFVAIB2hJeQa;admin
+testuser;$2y$10$hJqF0oKOYvP3a5N964zsn.78B4Bun4GLl0XT.zEn3LLTnwXuBi/mO;nutzer
+user2;$2y$10$PYCEeR8mrDRUL482a7fhUeMjuooiC70FETsPxcoSzYoHu6rVUTjUe;nutzer
+user3;$2y$10$DJZu6m3l8AM12T6NZxrK7u52gijk4o29atiHyTWI/laEBx2.dwekG;nutzer
+user4;$2y$10$OoY4V8R7PIAs3wiSJIbJcOtgwE0..7N1sgyFspGWsLk6EVuYx0jDa;nutzer
+user5;$2y$10$Dgj5zg/UI2bt87JcfMYJlOg.QkL1nq.tUJH4HUE.lBZoMsHiBgf.u;nutzer
