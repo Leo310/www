@@ -4,6 +4,18 @@
   if (isset($_SESSION['user']) && $_SESSION['rechte'] == "admin") header("location:startadmin.php");
   if (isset($_SESSION['user']) && $_SESSION['rechte'] == "nutzer") header("location:start.php");
   
+  //Verbindung zur Datenbank
+  $srvname = "localhost";
+  $user = "root";
+  $pw = "";
+
+  $con = new mysqli($srvname, $user, $pw);
+
+  if($con->connect_error) {
+	  die("Doesnt work".$con->connected_error);
+  }
+  echo "connected";
+ 
   include('include/inc_htmlhead');
 
   $error = "";
