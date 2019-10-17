@@ -23,7 +23,7 @@ foreach($users as $user){
 		echo "<tr><td style='width:200px'><form action='scr_bnutzerListe.php' method='post'><input type='hidden' name='name' value='$name'><input type='hidden' name='salt' value='$salt'><input class='inputnamebyadmin' type='text' id='nutzername' name='newname' placeholder='".$daten[0]."'></td><td style='width:500px'><input class='inputpwbyadmin' type='text' id='password' name='newpw' placeholder='kennwort zuweisen'></td>";
 		echo "<td style='width:90px'><select name='newrechte' size='1'>";
 		if($daten[0] == "admin") {
-			echo "<option selected>admin</option><option>nutzer</option>";
+			echo "<option selected>admin</option><option style='background:#272727'>nutzer</option>";
 		}else {
 			echo "<option>admin</option><option selected>nutzer</option>";
 		}
