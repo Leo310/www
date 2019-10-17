@@ -4,9 +4,10 @@ $name = $newname = $newpw = $newrechte = "";
 
 if(isset($_POST['name'])) $name = $_POST['name'];
 if(isset($_POST['newname'])) $newname = $_POST['newname'];
-if(isset($_POST['newpw'])) $newpw = password_hash($_POST['newpw'], PASSWORD_DEFAULT);
+if(isset($_POST['newpw'])){
+	if($_POST['newpw'])$newpw = password_hash($_POST['newpw'], PASSWORD_DEFAULT);
+}
 if(isset($_POST['newrechte'])) $newrechte = $_POST['newrechte'];
-
 
 $users = file("include/nutzer.txt", FILE_IGNORE_NEW_LINES);
 
@@ -15,7 +16,6 @@ $delete = -1;
 
 foreach($users as $user){
 	$daten = explode(";",$user);
-	if($newrechte == "admin"  || $newrechte == "nutzer" || !$newrechte){
 	if ($name == $daten[0]){
 		if(!$newname){
 			$newname = $daten[0];
@@ -27,10 +27,6 @@ foreach($users as $user){
 	$users[$index] = "$newname;$newpw;$newrechte";
 	file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 }
-}else{
-	$_SESSION['error2'] = "Geben sie bei den Rechten entweder admin oder nutzer ein.";
-	header("location:nutzerListe.php");
-}	
 	$index++;
 
 }
