@@ -4,19 +4,6 @@
   if (isset($_SESSION['user']) && $_SESSION['rechte'] == "admin") header("location:startadmin.php");
   if (isset($_SESSION['user']) && $_SESSION['rechte'] == "nutzer") header("location:start.php");
   
-  //Verbindung zur Datenbank
-  $srvname = "localhost";
-  $dbname = "website";
-  $user = "root";
-  $pw = "ddaqBjHh17xraubD";
-
-
-  $con = new mysqli($srvname, $user, $pw, $dbname);
-
-  if($con->connect_error) {
-	  die("Doesnt work".$con->connected_error);
-  }
- 
   include('include/inc_htmlhead');
 
   $error = "";
