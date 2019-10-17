@@ -6,15 +6,16 @@
   
   //Verbindung zur Datenbank
   $srvname = "localhost";
+  $dbname = "website";
   $user = "root";
-  $pw = "";
+  $pw = "ddaqBjHh17xraubD";
 
-  $con = new mysqli($srvname, $user, $pw);
+
+  $con = new mysqli($srvname, $user, $pw, $dbname);
 
   if($con->connect_error) {
 	  die("Doesnt work".$con->connected_error);
   }
-  echo "connected";
  
   include('include/inc_htmlhead');
 
