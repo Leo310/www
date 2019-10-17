@@ -1,7 +1,7 @@
 <?php
 session_start();
 $name = $newname = $newpw = $newrechte = "";
-if (isset($_SESSION['salt'])) $salt = $_SESSION['salt'];
+if (isset($_POST['salt'])) $salt = $_POST['salt'];
 if(isset($_POST['name'])) $name = $_POST['name'];
 if(isset($_POST['newname'])) $newname = $_POST['newname'];
 if(isset($_POST['newpw'])){
