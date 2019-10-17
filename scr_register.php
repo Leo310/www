@@ -25,7 +25,8 @@ foreach($users as $user){
 
 if(!$existent){
 	if($pw == $bpw){
-	$userarray = array($name, password_hash($pw, PASSWORD_DEFAULT), $rechte);
+	$_SESSION['salt'] = salt();
+	$userarray = array($name, password_hash($pw.$_SESSION['salt'], PASSWORD_DEFAULT), $rechte, $_SESSION['salt']);
 	$user = implode(";", $userarray);
 	file_put_contents("include/nutzer.txt", "\n".$user, FILE_APPEND);
 	$_SESSION['user'] = $name;
@@ -39,6 +40,12 @@ if(!$existent){
 	header("location:register.php");
 }
 
-
-
+function salt($länge = 5) {
+	$characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	$salt ="";
+	for($i = 0;$i < $länge;$i++) {
+		$salt .= $characters[rand(0, strlen($characters) - 1)];
+	}
+	return $salt;
+}
 ?>

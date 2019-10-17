@@ -1,11 +1,11 @@
 <?php
 session_start();
 $name = $newname = $newpw = $newrechte = "";
-
+if (isset($_SESSION['salt'])) $salt = $_SESSION['salt'];
 if(isset($_POST['name'])) $name = $_POST['name'];
 if(isset($_POST['newname'])) $newname = $_POST['newname'];
 if(isset($_POST['newpw'])){
-	if($_POST['newpw'])$newpw = password_hash($_POST['newpw'], PASSWORD_DEFAULT);
+	if($_POST['newpw'])$newpw = password_hash($_POST['newpw'].$salt, PASSWORD_DEFAULT);
 }
 if(isset($_POST['newrechte'])) $newrechte = $_POST['newrechte'];
 
@@ -24,7 +24,7 @@ foreach($users as $user){
 		}if (!$newrechte){
 			$newrechte = $daten[2];
 		}
-	$users[$index] = "$newname;$newpw;$newrechte";
+	$users[$index] = "$newname;$newpw;$newrechte;$salt";
 	file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 }
 	$index++;

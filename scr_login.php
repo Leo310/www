@@ -19,9 +19,10 @@ $found = 0;
 foreach ($users as $user) {
   // explode zerlegt den String in ein Array, das Trennzeichen ist frei wählbar
   $daten = explode(";", $user);
-  if ($name == $daten[0] && password_verify($pw, $daten[1])) {
+  if ($name == $daten[0] && password_verify($pw.$daten[3], $daten[1])) {
 	    $_SESSION['pw'] = $daten[1];
-	    $_SESSION['rechte'] = $daten[2];
+        $_SESSION['rechte'] = $daten[2];
+        $_SESSION['salt'] = $daten[3];
 		$rechte = $_SESSION['rechte'];
 	if($vergleichRecht == $rechte){
 		//auf adminseite

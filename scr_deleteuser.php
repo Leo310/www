@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) header("location:index.php");
-
+if (isset($_SESSION['salt'])) $salt = $_SESSION['salt'];
 $uname = $_SESSION['user'];
 $name = $_POST['name'];
 $pw = "";
@@ -21,7 +21,7 @@ foreach($users as $user) {
 	$daten = explode(";", $user);
 	if ($uname == $daten[0]) {
 		$delete = $index;
-		if (password_verify($pw, $daten[1])) {
+		if (password_verify($pw.$salt, $daten[1])) {
 
 		unset($users[$delete]);
 		file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
