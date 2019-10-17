@@ -3,9 +3,9 @@
  // Umleitung bei Aufruf ohne Anmeldung
  $oldpw = $newpw = $bnewpw = "";
 
- if (!isset($_SESSION['user'])) header("location:index.php");
+if (!isset($_SESSION['user'])) header("location:index.php");
 
-
+if (isset($_SESSION['salt'])) $salt = $_SESSION['salt'];
 if (isset($_POST['oldpw']))   $oldpw = $_POST['oldpw'];
 if (isset($_POST['newpw']))   $newpw = $_POST['newpw'];
 if (isset($_POST['bnewpw']))   $bnewpw = $_POST['bnewpw'];
@@ -25,10 +25,10 @@ $index = 0;
 foreach ($users as $user) {
 	$daten = explode(";", $user);
 	if($daten[0] == $thisuser) {
-		if(password_verify($oldpw, $daten[1])) {
+		if(password_verify($oldpw.$salt, $daten[1])) {
 			if($newpw == $bnewpw) {
-				$newpw = password_hash($newpw, PASSWORD_DEFAULT);
-				$users[$index] = "$thisuser;$newpw;$rechte";
+				$newpw = password_hash($newpw.$salt, PASSWORD_DEFAULT);
+				$users[$index] = "$thisuser;$newpw;$rechte;$salt";
 				file_put_contents("include/nutzer.txt", implode(PHP_EOL, $users));
 				header("Location:pwchange.php");
 				$_SESSION['pwchanged'] = '<font color="#01d28e">neues passwort wurde gespeichert.';
